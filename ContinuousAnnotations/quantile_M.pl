@@ -80,7 +80,7 @@ my($nb_ref_annot)  =$#list_ref_annot+1;
 print "ref-ld-chr   : $nb_ref_annot file(s)\n";
 for ($i=0; $i<=$#list_ref_annot ; $i++) {
 	print "               $list_ref_annot[$i]\n"; 
-	my $IN = IO::Uncompress::Gunzip->new( " $list_ref_annot[$i]22.annot.gz" ) or die "IO::Uncompress::Gunzip failed: $GunzipError\n";
+	my $IN = IO::Uncompress::Gunzip->new( " $list_ref_annot[$i]29.annot.gz" ) or die "IO::Uncompress::Gunzip failed: $GunzipError\n";
 	my(@line)=split ' ', <$IN>;
 	for ($j=0; $j<=$#line ; $j++) {
 		if($line[$j] eq $annot){
@@ -110,7 +110,7 @@ my(@MAF)=();
 my($chr);
 my($nbSNPs)=0;
 my($nbcommonSNPs)=0;
-for ($chr=1; $chr<=22 ; $chr++) {	
+for ($chr=1; $chr<=29 ; $chr++) {	
 	if (-e "$frqfile_chr$chr.frq") {
 		open(IN,"$frqfile_chr$chr.frq") or die "\nERROR! Cannot open $frqfile_chr$chr.frq.\n";
 		while (<IN>) {
@@ -145,7 +145,7 @@ my(@annot_value)=();
 my(@annot_value_all)=();
 my($cpt)=0;
 $j=$annot_colm-1;
-for ($chr=1; $chr<=22 ; $chr++) {
+for ($chr=1; $chr<=29 ; $chr++) {
 	my $IN = IO::Uncompress::Gunzip->new( " $annot_file$chr.annot.gz" ) or die "IO::Uncompress::Gunzip failed: $GunzipError\n";
 	while (<$IN>) {
 		chomp $_; my(@line)=split;
@@ -190,7 +190,7 @@ for ($k=0; $k<=$#list_ref_annot ; $k++) {
 	$cpt=0;
 	@thismatrix=();
 	@nb_per_Q=();
-	for ($chr=1; $chr<=22 ; $chr++) { 
+	for ($chr=1; $chr<=29 ; $chr++) { 
 		my($cpt0)=0;
 		my $IN = IO::Uncompress::Gunzip->new( " $list_ref_annot[$k]$chr.annot.gz" ) or die "IO::Uncompress::Gunzip failed: $GunzipError\n";
 		while (<$IN>) {
