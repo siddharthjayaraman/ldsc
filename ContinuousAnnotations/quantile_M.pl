@@ -13,6 +13,8 @@ sub print_header
   print "|              by quantile of continuous annotations               |\n";
   print "|                     sgazal\@hsph.harvard.edu                      |\n";
   print "|                      last modified: 08/10/18                     |\n";
+  print "|              https://github.com/siddharthjayaraman/ldsc/         |\n";
+  print "|                      last modified: 07/07/21                     |\n";
   print "\@------------------------------------------------------------------@\n";
   print "\n";
 }
