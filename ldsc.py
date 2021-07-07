@@ -26,10 +26,11 @@ try:
 except AttributeError:
     raise ImportError('LDSC requires pandas version >= 0.17.0')
 
-__version__ = '1.0.1'
+__version__ = '1.0.1 *Cattle'
 MASTHEAD = "*********************************************************************\n"
 MASTHEAD += "* LD Score Regression (LDSC)\n"
 MASTHEAD += "* Version {V}\n".format(V=__version__)
+MASTHEAD += "* Modified for use with Cattle genome, chromosome range 1-29\n"
 MASTHEAD += "* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane\n"
 MASTHEAD += "* Broad Institute of MIT and Harvard / MIT Department of Mathematics\n"
 MASTHEAD += "* GNU General Public License v3\n"
@@ -502,17 +503,17 @@ parser.add_argument('--ref-ld', default=None, type=str,
     'LDSC will automatically append .l2.ldscore/.l2.ldscore.gz to the filename prefix.')
 parser.add_argument('--ref-ld-chr', default=None, type=str,
     help='Same as --ref-ld, but will automatically concatenate .l2.ldscore files split '
-    'across 22 chromosomes. LDSC will automatically append .l2.ldscore/.l2.ldscore.gz '
+    'across 29 chromosomes. LDSC will automatically append .l2.ldscore/.l2.ldscore.gz '
     'to the filename prefix. If the filename prefix contains the symbol @, LDSC will '
     'replace the @ symbol with chromosome numbers. Otherwise, LDSC will append chromosome '
     'numbers to the end of the filename prefix.'
-    'Example 1: --ref-ld-chr ld/ will read ld/1.l2.ldscore.gz ... ld/22.l2.ldscore.gz'
+    'Example 1: --ref-ld-chr ld/ will read ld/1.l2.ldscore.gz ... ld/29.l2.ldscore.gz'
     'Example 2: --ref-ld-chr ld/@_kg will read ld/1_kg.l2.ldscore.gz ... ld/22_kg.l2.ldscore.gz')
 parser.add_argument('--w-ld', default=None, type=str,
     help='Filename prefix for file with LD Scores with sum r^2 taken over SNPs included '
     'in the regression. LDSC will automatically append .l2.ldscore/.l2.ldscore.gz.')
 parser.add_argument('--w-ld-chr', default=None, type=str,
-    help='Same as --w-ld, but will read files split into 22 chromosomes in the same '
+    help='Same as --w-ld, but will read files split into 29 chromosomes in the same '
     'manner as --ref-ld-chr.')
 parser.add_argument('--overlap-annot', default=False, action='store_true',
     help='This flag informs LDSC that the partitioned LD Scores were generates using an '

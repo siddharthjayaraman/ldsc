@@ -1,0 +1,14 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1 *Cattle
+* Modified for use with Cattle genome, chromosome range 1-29
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+
+Beginning analysis at Fri Jul  2 08:05:10 2021
+Analysis finished at Fri Jul  2 08:05:10 2021
+Total time elapsed: 0.0s
