@@ -186,7 +186,7 @@ def annot(fh_list, num=None, frqfile=None):
     '''
     annot_suffix = ['.annot' for fh in fh_list]
     annot_compression = []
-    if num is not None:  # 22 files, one for each chromosome
+    if num is not None:  # 29 files, one for each chromosome
         chrs = get_present_chrs(fh, num+1)
         for i, fh in enumerate(fh_list):
             first_fh = sub_chr(fh, chrs[0]) + annot_suffix[i]
